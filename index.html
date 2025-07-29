@@ -7,94 +7,139 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #2c0a0a;         /* Dark maroon */
-      --text: #ffffff;       /* White */
-      --accent: #ffffffcc;   /* Soft white */
+      --bg: #1e0d0d;        /* Dark maroon */
+      --text: #ffffff;
+      --light: #ffffffcc;
+      --highlight: #e63946; /* Accent color for buttons */
     }
 
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
-      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
-    html, body {
-      height: 100%;
-      background-color: var(--bg);
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
+    .hero {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-      text-align: center;
+      padding: 4rem 2rem;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    h1 {
-      font-size: 2.8rem;
+    .hero-text {
+      flex: 1 1 300px;
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
     }
 
-    p {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: var(--accent);
+    .hero-text p {
+      font-size: 1.1rem;
+      color: var(--light);
       margin-bottom: 2rem;
     }
 
-    .image-wrapper {
-      width: 100%;
-      max-width: 800px;
-      aspect-ratio: 3 / 1;
-      border-radius: 20px;
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .hero-buttons a {
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .btn-primary {
+      background-color: var(--highlight);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: #d62828;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--light);
+      color: var(--light);
+    }
+
+    .btn-secondary:hover {
+      background-color: #fff1;
+    }
+
+    /* Rectangle photo section */
+    .gallery-preview {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .photo-card {
+      flex: 1 1 300px;
+      max-width: 600px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
     }
 
-    .image-wrapper:hover {
-      transform: scale(1.02);
-    }
-
-    .image-wrapper img {
+    .photo-card img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
-      cursor: pointer;
     }
 
     footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: #bbb;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .image-wrapper {
-        border-radius: 14px;
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>Anil Lingala</h1>
-  <p>Photography | People. Places. Light.</p>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Capturing Moments,<br>One Click at a Time</h1>
+      <p>Welcome to my photography portfolio, where every image tells a story. Explore my work and discover the beauty in every moment.</p>
+      <div class="hero-buttons">
+        <a href="gallery.html" class="btn-primary">Explore</a>
+        <a href="contact.html" class="btn-secondary">Contact</a>
+      </div>
+    </div>
+  </section>
 
-  <a href="gallery.html" class="image-wrapper">
-    <img src="photo1.jpg" alt="Click to view gallery">
-  </a>
+  <section class="gallery-preview">
+    <div class="photo-card">
+      <img src="photo1.jpg" alt="Sample Photo 1">
+    </div>
+    <div class="photo-card">
+      <img src="photo2.jpg" alt="Sample Photo 2">
+    </div>
+  </section>
 
   <footer>
     © 2025 Anil Lingala. All rights reserved.
