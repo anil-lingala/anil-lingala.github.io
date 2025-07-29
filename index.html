@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anil Lingala | Photography</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #800000; /* Maroon */
-      --text: #000000;     /* Black */
+      --bg: #2c0a0a;         /* Dark maroon */
+      --text: #ffffff;       /* White */
+      --accent: #ffffffcc;   /* Soft white */
     }
 
     * {
@@ -17,13 +18,13 @@
       padding: 0;
     }
 
-    body {
+    html, body {
+      height: 100%;
+      background-color: var(--bg);
       font-family: 'Inter', sans-serif;
-      background-color: var(--primary);
       color: var(--text);
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
       align-items: center;
       justify-content: center;
       padding: 2rem;
@@ -31,23 +32,25 @@
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 2.8rem;
+      font-weight: 600;
       margin-bottom: 0.5rem;
     }
 
     p {
       font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--accent);
       margin-bottom: 2rem;
     }
 
     .image-wrapper {
-      width: 90%;
-      max-width: 900px;
-      height: 400px;
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 3 / 1;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease;
     }
 
@@ -64,17 +67,30 @@
     }
 
     footer {
-      margin-top: auto;
-      padding: 1.5rem;
-      color: #222;
-      font-size: 0.9rem;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .image-wrapper {
+        border-radius: 14px;
+      }
     }
   </style>
 </head>
 <body>
 
   <h1>Anil Lingala</h1>
-  <p>Capturing people, places, and poetry in light.</p>
+  <p>Photography | People. Places. Light.</p>
 
   <a href="gallery.html" class="image-wrapper">
     <img src="photo1.jpg" alt="Click to view gallery">
