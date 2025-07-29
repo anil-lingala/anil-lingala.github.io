@@ -197,6 +197,49 @@
         display: none; /* For mobile: hide or add hamburger later */
       }
     }
+
+    .nav-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.nav-btn.outlined {
+  border: 2px solid #800000;
+  color: #800000;
+  background-color: transparent;
+}
+
+.nav-btn.outlined:hover {
+  background-color: #800000;
+  color: white;
+}
+
+.nav-btn.solid {
+  background-color: #800000;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.nav-btn.solid:hover {
+  background-color: #a52a2a;
+}
+
   </style>
 </head>
 <body>
@@ -204,12 +247,15 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Anil</div>
-    <nav class="nav-links">
-      <a href="#">Portfolio</a>
-      <a href="#">About Me</a>
-      <a href="#">Services</a>
-      <a href="#">Gallery ▼</a>
-    </nav>
+<nav class="nav-links">
+  <a href="#portfolio" class="nav-btn">Portfolio</a>
+  <a href="#about" class="nav-btn">About Me</a>
+  <a href="#services" class="nav-btn">Services</a>
+  <a href="#gallery" class="nav-btn">Gallery</a>
+  <a href="#join" class="nav-btn outlined">Join</a>
+  <a href="#book" class="nav-btn solid">Book</a>
+</nav>
+    
     <div class="nav-buttons">
       <a href="#" class="join">Join</a>
       <a href="#" class="book">Book</a>
