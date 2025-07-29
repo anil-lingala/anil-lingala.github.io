@@ -8,7 +8,7 @@
   <style>
     :root {
       --primary: #800000; /* Maroon */
-      --secondary: #000000; /* Black */
+      --text: #000000;     /* Black */
     }
 
     * {
@@ -19,8 +19,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--secondary);
-      color: #fff;
+      background-color: var(--primary);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -33,22 +33,21 @@
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
     p {
       font-size: 1.2rem;
-      color: #ddd;
       margin-bottom: 2rem;
     }
 
     .image-wrapper {
       width: 90%;
-      max-width: 600px;
+      max-width: 900px;
+      height: 400px;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease;
     }
 
@@ -58,7 +57,8 @@
 
     .image-wrapper img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
       cursor: pointer;
     }
@@ -66,7 +66,7 @@
     footer {
       margin-top: auto;
       padding: 1.5rem;
-      color: #aaa;
+      color: #222;
       font-size: 0.9rem;
     }
   </style>
